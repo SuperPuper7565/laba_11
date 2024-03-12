@@ -177,107 +177,110 @@ namespace laba_11
         }
         static void Main(string[] args)
         {
-            //Console.WriteLine("Stack universal");
-            //Stack stack = new Stack();
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    switch (random.Next(1, 4))
-            //    {
-            //        case 1:
-            //            {
-            //                Circle c = new Circle();
-            //                c.RandomInit();
-            //                stack.Push(c);
-            //                break;
-            //            }
-            //        case 2:
-            //            {
-            //                Rectangle r = new Rectangle();
-            //                r.RandomInit();
-            //                stack.Push(r);
-            //                break;
-            //            }
-            //        case 3:
-            //            {
-            //                Parallelepiped p = new Parallelepiped();
-            //                p.RandomInit();
-            //                stack.Push(p);
-            //                break;
-            //            }
-            //    }
-            //}
-            //PrintStack(stack);
-            //Console.WriteLine("Добавьте элемент");
-            //Circle c1 = new Circle();
-            //c1.Init();
-            //stack.Push(c1);
-            //PrintStack(stack);
-            //Console.WriteLine("Удалите элемент");
-            //Circle c2 = new Circle();
-            //c2.Init();
-            //Stack temp = new Stack();
-            //while (stack.Count > 0)
-            //{
-            //    Shape s = stack.Pop() as Shape;
-            //    if (!s.Equals(c2 as Shape))
-            //        temp.Push(s);
-            //}
-            //while (temp.Count > 0)
-            //{
-            //    Shape s = temp.Pop() as Shape;
-            //    stack.Push(s);
-            //}
-            //PrintStack(stack);
-            //AllSquareAreas(stack);
-            //ShapesWithRightArea(stack);
-            //ShapesWithRightRadius(stack);
-            //Stack stack2 = CloneStack(stack);
-            //stack2.Push(new Circle());
-            //PrintStack(stack2);
-            //Console.WriteLine();
-            //PrintStack(stack);
-            //Console.WriteLine("SortedDictionary<K,T>");
-            //SortedDictionary<Shape, Rectangle> sd = new SortedDictionary<Shape, Rectangle>();
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    try
-            //    {
-            //        Rectangle value = new Rectangle();
-            //        value.RandomInit();
-            //        Shape key = value.GetBase;
-            //        sd.Add(key, value);
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        i--;
-            //    }
-            //}
-            //PrintSortedDictionary(sd);
-            //Console.WriteLine("Добавьте элемент");
-            //Rectangle r1 = new Rectangle();
-            //r1.Init();
-            //sd.Add(r1.GetBase, r1);
-            //PrintSortedDictionary(sd);
-            //Console.WriteLine("Удалите элемент");
-            //Rectangle r2 = new Rectangle();
-            //r2.Init();
-            //sd.Remove(r2.GetBase);
-            //PrintSortedDictionary(sd);
-            //Find(sd, r1);
-            //Find(sd, r2);
-            //AllSquareAreas(sd);
-            //ShapesWithRightArea(sd);
-            //ShapesWithRightRadius(sd);
-            //SortedDictionary<Shape, Rectangle> sd2 = CloneSD(sd);
-            //sd2.Add(r2.GetBase, r2);
-            //PrintSortedDictionary(sd2);
-            //Console.WriteLine();
-            //PrintSortedDictionary(sd);
-            //SortedSet<Shape> set1 = new SortedSet<Shape>();
-            //SortedSet<string> set2 = new SortedSet<string>();
-            //HashSet<Shape> set3 = new HashSet<Shape>();
-            //HashSet<string> set4 = new HashSet<string>();
+            Console.WriteLine("Stack universal");
+            Stack stack = new Stack();
+            for (int i = 0; i < 10; i++)
+            {
+                switch (random.Next(1, 4))
+                {
+                    case 1:
+                        {
+                            Circle c = new Circle();
+                            c.RandomInit();
+                            stack.Push(c);
+                            break;
+                        }
+                    case 2:
+                        {
+                            Rectangle r = new Rectangle();
+                            r.RandomInit();
+                            stack.Push(r);
+                            break;
+                        }
+                    case 3:
+                        {
+                            Parallelepiped p = new Parallelepiped();
+                            p.RandomInit();
+                            stack.Push(p);
+                            break;
+                        }
+                }
+            }
+            PrintStack(stack);
+            Console.WriteLine("Добавьте элемент");
+            Circle c1 = new Circle();
+            c1.Init();
+            stack.Push(c1);
+            PrintStack(stack);
+            Console.WriteLine("Удалите элемент");
+            Circle c2 = new Circle();
+            c2.Init();
+            Stack temp = new Stack();
+            while (stack.Count > 0)
+            {
+                Shape s = stack.Pop() as Shape;
+                if (!s.Equals(c2 as Shape))
+                    temp.Push(s);
+            }
+            while (temp.Count > 0)
+            {
+                Shape s = temp.Pop() as Shape;
+                stack.Push(s);
+            }
+            PrintStack(stack);
+            AllSquareAreas(stack);
+            ShapesWithRightArea(stack);
+            ShapesWithRightRadius(stack);
+            Stack stack2 = CloneStack(stack);
+            stack2.Push(new Circle());
+            PrintStack(stack2);
+            Console.WriteLine();
+            PrintStack(stack);
+            Console.WriteLine("SortedDictionary<K,T>");
+            SortedDictionary<Shape, Rectangle> sd = new SortedDictionary<Shape, Rectangle>();
+            for (int i = 0; i < 10; i++)
+            {
+                try
+                {
+                    Rectangle value = new Rectangle();
+                    value.RandomInit();
+                    Shape key = value.GetBase;
+                    sd.Add(key, value);
+                }
+                catch (Exception e)
+                {
+                    i--;
+                }
+            }
+            PrintSortedDictionary(sd);
+            Console.WriteLine("Добавьте элемент");
+            Rectangle r1 = new Rectangle();
+            r1.Init();
+            sd.Add(r1.GetBase, r1);
+            PrintSortedDictionary(sd);
+            Console.WriteLine("Удалите элемент");
+            Rectangle r2 = new Rectangle();
+            r2.Init();
+            sd.Remove(r2.GetBase);
+            PrintSortedDictionary(sd);
+            Find(sd, r1);
+            Find(sd, r2);
+            AllSquareAreas(sd);
+            ShapesWithRightArea(sd);
+            ShapesWithRightRadius(sd);
+            SortedDictionary<Shape, Rectangle> sd2 = CloneSD(sd);
+            sd2.Add(r2.GetBase, r2);
+            PrintSortedDictionary(sd2);
+            Console.WriteLine();
+            PrintSortedDictionary(sd);
+            SortedSet<Shape> set1 = new SortedSet<Shape>();
+            SortedSet<string> set2 = new SortedSet<string>();
+            HashSet<Shape> set3 = new HashSet<Shape>();
+            HashSet<string> set4 = new HashSet<string>();
             TestCollections testCollections = new TestCollections(1000);
+            testCollections.FindFirst();
+            testCollections.FindMiddle();
+            testCollections.FindLast();
             testCollections.FindNot();
         }
     }
